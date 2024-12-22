@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoListApp</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="/image/to-do-list.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Todo List</h1>
+    </header>
+
+    <section class="container">
+      <div class="form-container">
+        <form class="todo-form">
+          <input type="text" class="todo-input" />
+          <button class="add-todo" type="submit">
+            <i class="fas fa-plus-circle"></i>
+          </button>
+        </form>
+
+        <div class="select">
+          <select class="filter-todos" name="todos">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="todo-container">
+        <ul class="todolist">
+          <!-- <li class="todo">
+            <p class="todo__title">todo #1</p>
+            <span class="todo__createdAt">1402/1/28</span>
+            <button class="todo__check">
+              <i class="fas fa-check-square"></i>
+            </button>
+            <button class="todo__edit">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button class="todo__remove">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </li> -->
+        </ul>
+      </div>
+    </section>
+    <div class="backdrop">
+      <div class="edit__modal">
+        <div class="modal__header">
+          <p>Edit Todo Title</p>
+          <button class="close-modal">❌</button>
+        </div>
+        <form class="modal__form">
+          <div class="form__control">
+            <labal for="title" class="label">Title:</labal>
+            <input
+              type="text"
+              id="title"
+              class="editInput"
+              placeholder="Enter your new title"
+            />
+          </div>
+          <button type="button" class="btn close--btn">Close</button>
+          <button type="submit" class="btn submit--btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./todolist.js"></script>
+  </body>
+</html>
